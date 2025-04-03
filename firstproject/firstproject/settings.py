@@ -40,7 +40,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+CREATED_APPS = [
+    'chai',
+    'tailwind',
+    'theme',
+]
 
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+INSTALLED_APPS = INSTALLED_APPS + CREATED_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
