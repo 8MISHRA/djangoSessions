@@ -4,7 +4,22 @@
 Chai app page
 {% endblock title %}
 {% block content %}
-<h1 class="bg-orange-50 text-3xl">
-All chai is available here
+<h1 class="bg-black-50 text-3xl">
+All chais are available here
 </h1>
+
+{% for chai in chais  %}
+
+    <div class="chai-item">
+        test
+        
+        <img src="{{ chai.image.url }}" alt="chai image">
+        <h3>
+            {{chai.name}}
+        </h3>
+
+    </div>
+
+{% endfor  %}
+
 {% endblock content %}

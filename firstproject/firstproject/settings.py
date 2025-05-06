@@ -44,12 +44,15 @@ CREATED_APPS = [
     'chai',
     'tailwind',
     'theme',
+    'django_browser_reload',
 ]
 
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+NPM_BIN_PATH = '/home/divyansh/.nvm/versions/node/v20.15.1/bin/npm'
 
 INSTALLED_APPS = INSTALLED_APPS + CREATED_APPS
 
@@ -61,6 +64,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'firstproject.urls'
@@ -131,6 +136,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
